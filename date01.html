@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    #calendar{
+      width: 700px;
+      background-color: lightgray;
+      margin: 20px auto;
+
+    }
+    #calendar::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    #month_year{
+      width: 700px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+    ul > li{
+      float: left;
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+    #datesUl > li:empty{
+      opacity: 0;
+    }
+    #datesUl > li:hover{
+      background-color: lightblue;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- https://www.w3study.wiki/a/202108/497805.html -->
+    <!-- https://codertw.com/前端開發/231882/ -->
+    <div id="calendar">
+        <div id="month_year">
+          <select id="year"></select>年
+          <select id="month"></select>月
+        </div>
+        <ul id="title">
+          <li>星期日</li>
+          <li>星期一</li>
+          <li>星期二</li>
+          <li>星期三</li>
+          <li>星期四</li>
+          <li>星期五</li>
+          <li>星期六</li>
+        </ul>
+        <ul id="datesUl"></ul>
+      </div>
+      <script>
+        var yearSelect = document.getElementById('year');
+        var monthSelect = document.getElementById('month');
+        var datesUl = document.getElementById('datesUl');
+        //初始化
+        function init(){
+            var now = new Date();       //獲取當前的日期
+            for(var year= 1990 ;year < 3000 ; year++){    //初始化倆個選項卡
+                createOption(year,year,yearSelect);
+                
+            }
+            for(var month = 1;month < 13 ;month++){
+                createOption(month,month,monthSelect);
+            }
+                     
+            showSelect(now.getFullYear(),now.getMonth()+1 );  //引用顯示選項卡的函式
+            showDates();                  //呼叫顯示日期的函式
+            yearSelect.onchange=function(){         //當選項卡改變時
+                showDates();
+            };
+            monthSelect.onchange=function(){
+                showDates();
+            }
+        }
+        init();            //呼叫初始化函式   
+        //建立option的函式
+        function createOption(text,value,parent){
+            var option = document.createElement('option');
+            option.innerHTML = text;
+            option.value = value;
+            parent.appendChild(option);
+        }
+        //獲取當前的日期並顯示在選項卡中
+        function showSelect(year,month){
+            yearSelect.value = year;
+            monthSelect.value = month;
+        }
+        //獲取選擇的年月的第一天是星期幾 
+        function getDays(year,month){
+            var d = new Date(year,month+1);
+            return d.getDay();
+        }
+        //根當前的select中的年和月來顯示日期
+        function showDates(){
+            datesUl.innerHTML= "";
+            var year = yearSelect.value;
+            var month = monthSelect.value;
+            //建立空的li
+            for(var i=0;i<getDays(year,month);i++  ){
+                createLi("",datesUl);
+            }
+            //建立有日期的li
+            for(var j=1;j<=getDatesOfMonth(year,month);j++  ){
+                createLi(j,datesUl);
+            }
+        }
+        //建立li並新增至對應的容器
+        function createLi(text,parent){
+            var li = document.createElement('li');
+            li.innerHTML = text;
+            parent.appendChild(li);
+        }
+        //建立一個輸入年月計算出這個月有幾天的函式
+        function getDatesOfMonth(year,month){
+            var d = new Date(year,month,0);
+            return d.getDate();
+        }
+        </script>
+</body>
+</html>

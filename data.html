@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="roomDateSearch.css">
+    <style>
+        .leftBtn,.rightBtn{
+            display: inline-block;
+            width: 0.5em;
+            height: 0.5em;
+            border: solid #000000c0;
+            border-width: 3px 0px 0px 3px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .leftBtn{
+            transform: rotate(-45deg);
+            left: 0;
+            right: 50%;
+            
+        }
+        .rightBtn{
+            transform: rotate(135deg);
+            right: 0;
+            left: 50%;
+        }
+        caption{
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .canAppointment:hover{
+            background-color: #afa;
+
+        }
+        .selectday{
+            background-color: #afa;
+        }
+    </style>
+</head>
+<body>
+    <div class="selectRoom">
+    <div class="date">
+        <table>
+            <caption><span class="leftBtn"></span><span id="year"></span>年<span id="month"></span>月<span class="rightBtn"></span></caption>
+            <thead>
+                <tr>
+                    <td>日</td>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                    <td>六</td>
+                </tr>
+            </thead>
+            <tbody id="datestable">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    var yearSelect ;
+    var monthSelect ;
+    var datestable ;
+    var nowdate;
+    var rightBtn;
+    var leftBtn;
+    var month;
+    var year;
+    var selectday;
+    var selectDayObj = { 
+        year:0000,
+        month:00,
+        day:00,
+    }
+    var selectDay = [selectDayObj,selectDayObj]
+    
+    //初始化
+    window.addEventListener("load",function(){
+        yearSelect = document.getElementById('year');
+        monthSelect = document.getElementById('month');
+        datestable = document.getElementById('datestable');
+        rightBtn =  document.getElementsByClassName('rightBtn')
+        leftBtn = document.getElementsByClassName('leftBtn')
+       
+        var nowdate = new Date();       //獲取當前的日期
+        year = nowdate.getFullYear();
+        month = nowdate.getMonth();
+        showDates();                  //呼叫顯示日期的函式
+        rightBtn[0].addEventListener("click",function(){    
+            dateChange(1)
+        });
+        leftBtn[0].addEventListener("click",function(){    
+            dateChange(-1)
+        });
+        
+    })
+    function selectBtnCreate(){
+        selectday = document.querySelectorAll(".canAppointment")
+        selectday.forEach( e => {
+            e.addEventListener("click",()=>{
+                e.classList.add("selectday")
+                selectDay[0].year = year;
+                selectDay[0].month = month + 1;
+                selectDay[0].day = e.innerHTML;
+            });
+        });
+    }
+    function dateChange(number){
+        if((month + number) < 0){
+            year += number;
+            month = 11
+        }else if((month + number) > 11){
+            year += number;
+            month = 0
+        }else{
+            month += number;
+        }
+        showDates();  
+    }
+  
+    //獲取選擇的年月的第一天是星期幾 
+    // function getDays(year,month){
+    //     var d = new Date(year,month);
+    //     return d.getDay();
+    // }
+    //改變月曆日期
+    function showDates(){
+        yearSelect.innerHTML = year;
+        monthSelect.innerHTML = (`${month + 1}`).padStart(2, '0');
+        datestable.innerHTML= "";
+        var yearsm = parseInt(yearSelect.innerHTML);
+        var monthsm = parseInt(monthSelect.innerHTML);
+        // var nullnumber = getDays(year,month - 1); //當月星期幾開始 
+        var nullnumber = new Date(yearsm,monthsm - 1).getDay(); //當月星期幾開始 
+        var allnumber = nullnumber + new Date(yearsm,monthsm,0).getDate() ; //算出這月星期過開使+算出這個月有幾天
+        // document.write(allnumber)
+        //建立空的li
+        var tr = document.createElement('tr');
+        for(var k = 1; k <= allnumber ;k++){
+            tr.appendChild(createTd((k <= nullnumber) ?  "":(k - nullnumber) ));
+            if(k != 0 && k%7 == 0){
+                datestable.appendChild(tr)
+                tr = document.createElement('tr')
+            } 
+        }
+        datestable.appendChild(tr)
+        selectBtnCreate()
+    }
+    //建立td並新增至對應的容器
+    function createTd(text){
+        var td = document.createElement('td');
+        td.innerHTML = text;
+        if(text != ""){
+            td.classList.add("canAppointment")
+        }
+        return td;
+    }
+    </script>
+
+
+
+</body>
+</html>

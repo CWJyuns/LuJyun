@@ -1,0 +1,102 @@
+section{
+    width: 100%;
+    text-align: center;
+}
+
+.mapCell{
+    border-radius: 10px;
+    overflow: hidden;
+}
+section>div{
+    width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+.transportation{
+    font-size: 18px;
+}
+section>div h2{
+    font-size: 21px;
+    display: inline-block;
+    box-sizing: border-box;
+    color: #ffffffef;
+    background-color: #6cbd9b;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-shadow: 0px 0px 1px #0006;
+    letter-spacing: 0.1em;
+    /* text-align: center; */
+}
+section>div>div{
+    width: 100%;
+    /* margin: auto; */
+    box-sizing: border-box;
+    padding: 30px;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+    color: #000000d0;
+}
+iframe{
+    vertical-align: top;
+}
+.way li:nth-child(odd)::before{
+    box-sizing: border-box;
+    content: "";
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    border: 0.4em solid #666;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 1em;
+    position: relative;
+}
+.way div{
+    /* margin-left: 70px; */
+}
+.way ul{
+    display: inline-block;
+    text-align: left;
+    margin-left: 150px;
+}
+.way li:last-child::before{   
+    border: 0.4em solid #000d;
+    /* background-color: #5d878c; */
+    background-color: #FAF3B2;
+}
+.way li:nth-child(even)::before{
+    box-sizing: border-box;
+    content: "";
+    width: 0.4em;
+    height: 5em;
+    margin-top: -1px ;
+    background-color: #666;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.8em;
+    margin-right: 3em;
+    font-size: 16px;
+}
+.way li:nth-last-child(2)::before{
+    background:linear-gradient(#666 , #000d);
+}
+.way li:nth-child(even){
+    font-size: 12px;
+}
+.way li:nth-child(odd){
+    font-weight: bold;
+}
+body section:last-child{
+    padding-bottom: 100px;
+}
+
+
+/* ------------------------- */
+header li:nth-child(4) a{
+    /* color: #000a; */
+    background-color: #0005;
+    text-shadow: none ;
+    /* padding: 20px 15px; */
+}

@@ -1,0 +1,391 @@
+
+.viewpoint{
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+    padding: 60px 0px;
+    box-sizing: border-box;
+    
+}
+.viewpointCell{
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+   
+}
+.viewpointCell .pic img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 250px;
+}
+.viewpointCell .pic{
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 2/1;
+}
+.viewpointCell  h3,.viewpointCell  .txt{
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    line-height: 1.5em;
+    background-image: linear-gradient(#0008 100% ,transparent );
+}
+.viewpointCell  h3{
+    border-radius: 10px 10px 0px 0px;
+    font-size: 18px;
+    top: 10px;
+    left: 10px;
+} 
+.viewpointCell  .txt{
+    border-radius: 10px 0px 10px 0px;
+    font-size: 15px;
+    bottom: 10px;
+    padding: 0px 15px;
+} 
+@media screen and (max-width:785px) {
+    .viewpointCell{
+        /* padding: 0px 80px; */
+    }
+}
+@media screen and (min-width:786px) {
+    
+    
+}
+@media screen and (min-width:786px) {
+    .viewpoint{
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+@media screen and (min-width:996px) {
+    .viewpointCell{
+        width: 25%;
+        transition: transform 1s 0s;
+    }
+    .viewpointCell  h3{
+        opacity: 0;
+        
+    }
+    .viewpointCell:hover  h3{
+        opacity: 1;
+        transition: opacity 1s 0s;
+    }
+    .viewpointCell:hover{
+        transform: scale(1.2);
+        position: relative;
+        z-index: 10;
+        transition: transform 1s 0s;
+
+    }
+   
+}
+/* viewpoint */
+/* ------------------------ 聯絡我們 ------------------------ */
+section h2{
+    font-size: 21px;
+    line-height: 3em;
+    display: flex;
+    align-items: center;
+    color: #632E0A;
+    justify-content: center;
+}
+section h2::after,section h2::before{
+    content: "";
+    width: 0.2em;
+    height: 0.2em;
+    margin: 0px 1em;
+    border-radius: 300px;
+    transition: flex-grow 2s ;
+}
+section:hover h2::after,section:hover h2::before{
+    flex-grow: 1;
+    transition: flex-grow 2s ;
+}
+section h2::before{
+    background-image: linear-gradient( to left, #632E0Aee 70%,transparent );
+}
+section h2::after{
+    background-image: linear-gradient( to right, #632E0Aee 70%,transparent );
+}
+.contactUs{
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    max-width: inherit;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px;
+   
+    color: #632E0A;
+}
+.contactUs div:first-child{
+    width: 100%;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    line-height: 3em;
+    font-size: 21px;
+    margin: auto;
+}
+.map{
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px ;
+    box-sizing: border-box;
+    margin: auto;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    aspect-ratio: 2/1.2;
+    border-radius: 5px;
+}
+
+.contactUs .txt,.contactUs .contactBlock{
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 0.1em;
+    padding: 0px 20px;
+    font-size: 15px;
+    margin-bottom: 2em;
+    line-height: 3em;
+}
+
+.contactUs .contactBlock{
+    text-align: center;
+    box-sizing: border-box;
+}
+.contactBlock label{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-top: 2em;
+}
+.contactBlock label input,.contactBlock label textarea{
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 0px 1em;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+}
+.contactBlock label input{
+    line-height: 2em;
+    border-radius: 200px;
+}
+.contactBlock label textarea{
+    padding: 0.3em 1em 0 1em;
+    line-height: 1.5em;
+    border-radius: 10px;
+    resize:none;
+}   
+.contactBlock input:placeholder-shown +span,.contactBlock textarea:placeholder-shown +span{
+    top: 0;
+    left: 1em;
+    color: #632E0A88;
+}
+.contactBlock input::placeholder,.contactBlock textarea::placeholder{
+    visibility: hidden;
+}
+.contactBlock span,.contactBlock input:focus ~ span,.contactBlock textarea:focus ~ span{
+    position: absolute;
+    color: #632E0A;
+    line-height: 2em;
+    top: 0;
+    transition: 0.3s;
+    top: -1.6em;
+    left: 0.5em;
+    transition: all 0.3s;
+}
+.contactBlock .btn ,.contactBlock .rebtn,.contactUs .txt::after{
+    cursor: pointer;
+    background-color: #632E0Aee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+    padding:0.3rem 1.0rem;
+    letter-spacing: 0.1em;
+    width: 48%;
+    border: 2px solid #632E0Aee;
+    display: inline-block;
+    margin-top: 1em;
+}
+.contactBlock .btn{
+    color: #fff;
+}
+.contactBlock .rebtn{
+    color: #632E0Aee;
+    border: 2px solid #632E0Aee;
+    background-color: transparent;
+}
+.contactUs .txt h3,.contactUs .contactBlock h3{
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contactUs .txt h3::after,.contactUs .txt h3::before,.contactUs .contactBlock h3::after,.contactUs .contactBlock h3::before{
+    border-radius: 10px;
+    content: '';
+    width: 0.2em;
+    height: 0.2em;
+    flex-grow: 1;
+}
+/* .contactUs .txt h3::after,.contactUs .contactBlock h3::after{
+    background-image: linear-gradient( 90deg , #F5F5F5,#547A82);
+    margin-left: 0.5em;
+}
+.contactUs .txt h3::before,.contactUs .contactBlock h3::before{
+    background-image: linear-gradient( -90deg , #F5F5F5,#547A82);
+    margin-right: 0.5em;
+} */
+
+
+/* ------------------------ 客房介紹 ------------------------ */
+.roomRefer{
+    box-sizing: border-box;
+}
+.roomRefer > article{
+    max-width: 1200px;
+    margin: auto;
+}
+.roomReferCell .pic img{
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+    border-radius: 5px;
+}
+.roomReferCell {
+    padding: 10px;
+    border-radius: 10px;
+    color:#632E0A ;
+}
+.roomReferCell .txt{
+    min-height: 100px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.roomReferCell .txt p:first-child{
+    width: 100%;
+}
+.roomRefer{
+    width: 100%;
+    background-image: url(../pic/bg_contact.svg);
+    background-repeat: no-repeat;
+    background-position:center top;
+}
+
+.btn{
+    background-color: #F9BC20;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display:  inline-block;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    text-shadow: 0px 0.5px 2px  #000a;
+}
+
+
+@media screen and (max-width:767px){
+
+    /* ------------------------ 聯絡我們 ------------------------ */
+    .contactBlock{
+        display: none;
+    }
+
+    /* ------------------------ 客房介紹 ------------------------ */
+    .roomRefer{
+        background-size: 14000px auto;
+    }
+    .roomRefer > article{
+        padding: 40px;
+    }
+    .roomRefer .btn{
+        background-color: #632E0Aee;
+    }
+} 
+@media screen and (max-width:995px) {
+    section h2::after,section h2::before{
+        flex-grow: 1;
+        transition: flex-grow 2s ;
+    }
+}
+@media screen and (min-width:768px) {
+    /* ------------------------ 聯絡我們 ------------------------ */
+    .contactUs h2{
+        max-width: 1200px;
+        
+    }
+    .contactUs{
+        justify-content: space-between;
+        justify-content: center;
+        padding: 10px
+    }
+    .contactUs .contactBlock{
+        width: 60%;
+    }
+    .contactUs .txt{
+        width: 40%;
+    }
+
+
+    /* ------------------------ 客房介紹 ------------------------ */
+    .roomRefer > article{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .roomReferCell {
+        width: 30%;
+    }
+    .roomReferCell {
+        background-color: transparent;
+        transition: background-color 0.3s ,transform 0.5s;
+    }
+    .roomReferCell:hover {
+        /* background-color: #9E3790; */
+        background-color: #A13B91;
+        transform: scale(1.1);
+        transition: background-color 0.3s ,transform 0.5s;
+        color: #fff;
+    }
+    .roomRefer{
+        background-size: 5500px auto;
+        padding: 100px 10px;
+    }
+
+    
+}
+@media screen and (min-width:996px) {
+    /* ------------------------ 聯絡我們 ------------------------ */
+    .contactUs .txt,.contactUs .contactBlock{
+        padding: 0px 60px;
+    }
+    .contactUs .contactBlock{
+        max-width: 600px;
+        width: 50%;
+    }
+    .contactUs .txt{
+        max-width: 600px;
+        width: 50%;
+    }
+    .map{
+        padding: 0px 60px;
+    }
+    
+}

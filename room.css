@@ -1,0 +1,143 @@
+.room .pic{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    font-size: 0px;
+}
+.room .pic div{
+    padding: 10px 0px;
+    display: flex;
+    overflow:hidden ;
+}
+.pic>img{
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    width: 100%;
+    vertical-align: top;
+}
+.pic div img{
+    width: 20%;
+    vertical-align: top;
+}
+.room h3{
+
+}
+.room .txt{
+    font-size: 15px;
+    line-height: 2em ;
+    letter-spacing: 0.1em;
+}
+section h2{
+    justify-content: center;
+    font-size: 21px;
+    line-height: 3em;
+    display: flex;
+    align-items: center;
+    color: #632E0A;
+}
+section h2::after,section h2::before{
+    content: "";
+    width: 0.2em;
+    height: 0.2em;
+    margin: 0px 1em;
+    border-radius: 300px;
+    flex-grow: 0;
+    transition: flex-grow 2s;
+}
+section h2::before{
+    background-image: linear-gradient( to left, #632E0Aee 70%,transparent );
+}
+section h2::after{
+    background-image: linear-gradient( to right, #632E0Aee 70%,transparent );
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+article h3{
+    display: block;
+    font-size: 18px;
+    /* line-height: 3em; */
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+    background-color: #632E0Aee ;
+    color: #FBF2E1 ;           
+}
+@media screen and (max-width:995px) {
+    article h3{
+        margin: 10px 0px;
+        position: sticky;
+        top: 0.6rem;
+        z-index: 10;
+    }
+    .menu ~ main h3{
+        z-index: 0;
+    }
+    .room .txt{
+        padding: 30px 50px;
+    }
+    section h2::after,section h2::before{
+        flex-grow: 1;
+    }
+}
+@media screen and (min-width:996px) {
+    section{
+        max-width: 1200px;
+        margin: auto;
+    }
+    section:hover h2::after,section:hover h2::before{
+        flex-grow: 1;
+        transition: flex-grow 2s;
+    }
+    article{
+        position: relative;
+    }
+    .room h3{
+        margin: 0 30%;
+    }
+    article .pic{
+        box-sizing: border-box;
+        padding: 50px 20px;
+        width: 50%;
+    }
+    .room .txt{
+        align-self: center;
+        padding:10px 20px;
+        width: 50%;
+        box-sizing: border-box;
+        
+    }
+    article .pic::after,article .pic::before{
+        content: '';
+        background-color: #632E0Aee;
+        left: 0;
+        right: 0;
+        display: block;
+        position: absolute;
+    }
+    article .pic::after{
+        width: 3px;
+        border-radius: 0px 0px 10px 10px;
+        top: 2.2rem;
+        height: 0;
+        margin: auto;
+        transition: height 1s 0.5s;
+    }
+    article:hover .pic::after{
+        height: 91%;
+        transition: height 1s ;
+    }
+    article .pic::before{
+        border-radius: 10px;
+        width: 0;
+        top: 0;
+        bottom: 0;
+        height: 4px;
+        margin: 24% auto ;
+        transition: width 0.5s  ;
+    }
+    article:hover .pic::before{
+        width: 1rem;
+        transition: width 0.5s 1s ;
+    }
+}

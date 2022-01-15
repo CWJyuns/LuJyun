@@ -1,0 +1,15 @@
+[Error] Unrecognized Content-Security-Policy directive 'worker-src'.
+
+[Error] Unrecognized Content-Security-Policy directive 'require-trusted-types-for'.
+
+[Info] Successfully preconnected to https://www.gstatic.com/
+[Info] Successfully preconnected to https://ssl.gstatic.com/
+> 已選取的元件
+< <div class="GyAeWb" id="rcnt">…</div>
+> new Date(year,month+1);
+< ReferenceError: Can't find variable: year
+> console.log)(new Date(2021,1);)
+< SyntaxError: Unexpected token ')'
+> console.log(new Date(2021,1))
+[Log] Mon Feb 01 2021 00:00:00 GMT+0800 (CST)
+< undefined

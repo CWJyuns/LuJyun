@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廬竣-預約確認-</title>
+    <!-- ---------------------CSS Reset--------------------- -->
+    <link rel="stylesheet" href="css/cssReset.css">
+    <!-- ---------------------共用--------------------- -->
+    <link rel="stylesheet" href="css/globalCss.css">
+    <script src="js/globalJs.js"></script>
+ 
+   
+    <!-- <link rel="stylesheet" href="determinePage.css"> -->
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="pic/logo.svg" alt="logo">
+                <span>廬竣</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="room.html">民宿介紹</a>
+                </li>
+                <li> 
+                    <a href="roomDateSearch.html">空房查詢</a>
+                </li>
+                <li>
+                    <a href="notice.html">入住須知</a>
+                </li>
+                <li>
+                    <a href="transportation.html">來宿方式</a>
+                </li>
+                <li>
+                    <a href="contactUs.html">聯絡我們</a>
+                </li>
+            </ul>
+            <a href="determinePage.html" class="btn">預定</a>
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    
+    <section>
+        <article class="determine">
+            <article class="determineRoom">
+                <div class="pic">
+                    <img src="pic/roomRefer_01.jpeg" alt="">
+                    <div class="txt">
+                        <div>房型：<span></span></div>
+                        <div>日期：<span></span></div>
+                        <div>房客人數：<span></span></div>
+                    </div>
+                </div>
+            </article>
+            <article class="determineDate">
+
+            </article>
+            <article class="money">
+                <div>原價：<span></span></div>
+                <div>折扣：<span></span></div>
+                <div>總價(TWD)：<span></span></div>
+            </article>
+                
+            
+            <article class="checkInData">
+                <form action="#">
+                    <label>
+                        <input type="text" required placeholder="姓名" required>
+                        <span>姓名</span>
+                    </label>
+                    <label>
+                        <input type="tel" required placeholder="電話" required>
+                        <span>電話</span>
+                    </label>
+                    <label>
+                        <input type="number" required placeholder="人數"  min="1" max="6" required >
+                        <span>人數</span>
+                    </label>
+                    <label>
+                        <input type="email" placeholder="ex@gmail.com"  >
+                        <span>電子信箱</span>
+                    </label>
+                    <!-- <input type="reset" value="重新輸入" class="rebtn"> -->
+                    <input type="submit" value="完成預定" class="btn">
+                </form>
+            </article>
+           
+        </article>
+    </section>
+    
+
+<style>
+header nav a.btn {
+    visibility: hidden;
+}
+.checkInData{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.checkInData form{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.checkInData label,.checkInData label input{
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+}
+.checkInData label{
+    position: relative;
+    margin-top: 2em;
+}
+.checkInData label input{
+    border: none;
+    padding: 0px 1em;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+}
+.checkInData label input{
+    line-height: 2em;
+    border-radius: 200px;
+}
+.checkInData input:placeholder-shown +span{
+    top: 0;
+    left: 1em;
+    color: #632E0A88;
+}
+.checkInData input::placeholder,.checkInData textarea::placeholder{
+    visibility: hidden;
+}
+.checkInData span,.checkInData input:focus ~ span{
+    position: absolute;
+    color: #632E0A;
+    line-height: 2em;
+    top: 0;
+    transition: 0.3s;
+    top: -1.6em;
+    left: 0.5em;
+    transition: all 0.3s;
+}
+.checkInData .btn ,.checkInData .rebtn,.contactUs .txt::after{
+    cursor: pointer;
+    background-color: #632E0Aee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+    padding:0.3rem 1.0rem;
+    letter-spacing: 0.1em;
+    width: 48%;
+    border: 2px solid #632E0Aee;
+    display: inline-block;
+    margin-top: 1em;
+}
+.checkInData .btn{
+    color: #fff;
+}
+.checkInData .rebtn{
+    color: #632E0Aee;
+    border: 2px solid #632E0Aee;
+    background-color: transparent;
+}
+</style>
+
+
+    <!-- ----------------頁尾---------------- -->
+    <footer>
+        <div class="footerLogo">
+            <a href="#"><img src="pic/instagram.svg" alt="InstagramLogo"></a>
+            <a href="#"><img src="pic/line.svg" alt="LineLogo" data-note="1111"></a>
+            <a href="#"><img src="pic/facebook.svg" alt="FacebookLogo"></a>
+            <a href="#"><img src="pic/youTube2.svg" alt="YoutubeLogo"></a>
+        </div>
+        <div class = "copyright">Copyright © 2022 CWjyun 僅供學習、展示用</div>
+    </footer>
+</body>
+</html>

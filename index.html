@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <!-- viewport-fit=cover iphone 橫向 滿版 -->
+    <title>廬竣</title>
+    <!-- ---------------------CSS Reset--------------------- -->
+    <link rel="stylesheet" href="css/cssReset.css">
+    <!-- ---------------------OwlCarousel slider--------------------- -->
+    <link rel="stylesheet" href="expansion/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="expansion/owlCarousel/owl.theme.default.min.css">
+    <!-- ---------------------共用--------------------- -->
+    <link rel="stylesheet" href="css/globalCss.css">
+    <script src="js/globalJs.js"></script>
+
+    <link rel="stylesheet" href="css/index.css"> 
+    <style>
+        /* <!-- ---------------------OwlCarousel slider--------------------- --> */
+            .owl-carousel{
+                position: relative;
+                /* max-width: 1200px; */
+                margin: auto;
+            }
+            
+            .owl-theme .owl-nav [class*=owl-]{
+                display: block;
+                position: absolute;
+                top:0;
+                bottom: 0;
+                margin: 0px;
+                color:#FFFa;
+            }
+            .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+                padding: 0px 10px !important ;
+            }
+            .owl-carousel .owl-nav button.owl-next{
+                border-radius: 100px 0px 0px 100px 
+            }
+            .owl-carousel .owl-nav button.owl-prev{
+                border-radius: 0px 100px 100px 0px ; 
+            }
+            .owl-next{
+                right: 0;
+            }
+            .owl-prev{
+                left: 0;
+            }
+            .owl-theme .owl-nav [class*=owl-]>span{
+                font-size: 80px;
+                color:#FFFa;
+            }
+            .owl-theme .owl-nav [class*=owl-]:hover{
+                /* background-color: #000; */
+                box-sizing: border-box;
+                background-color: #86979155;
+            }
+            .owl-dots{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                
+            }
+            .myImgSlider > img{
+                aspect-ratio: 2/1;
+                object-fit: cover;
+                max-height: 500px;
+                width: 100%;
+            }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="pic/logo.svg" alt="logo">
+                <span>廬竣</span>
+            </a>
+            <ul>
+                <li>
+                    <a href="room.html">民宿介紹</a>
+                </li>
+                <li> 
+                    <a href="roomDateSearch.html">空房查詢</a>
+                </li>
+                <li>
+                    <a href="notice.html">入住須知</a>
+                </li>
+                <li>
+                    <a href="transportation.html">來宿方式</a>
+                </li>
+            </ul>
+            <a href="determinePage.html" class="btn">預定</a>
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- ---------------------OwlCarousel slider--------------------- -->
+        <article>
+            <div class="owl-carousel  owl-theme">
+                <div class="myImgSlider">
+                    <img src="https://picsum.photos/300/200/?random=1">
+                </div>
+                <div class="myImgSlider">
+                    <img src="https://picsum.photos/300/200/?random=2">
+                </div>
+                <div class="myImgSlider">
+                    <img src="https://picsum.photos/300/200/?random=3">
+                </div>
+                <div class="myImgSlider">
+                    <img src="https://picsum.photos/300/200/?random=4">
+                </div>
+                <div class="myImgSlider">
+                    <img src="https://picsum.photos/300/200/?random=5">
+                </div>
+                <div class="myImgSlider">
+                    <img src="https://picsum.photos/300/200/?random=6">
+                </div>
+                <div class="myImgSlider">
+                    <img src="https://picsum.photos/300/200/?random=7">
+                </div>
+                
+            </div>
+        </article>
+        <section  class="roomRefer">
+            <article>
+                <h2>民宿介紹</h2>
+                <article class="roomReferCell">
+                    <div class="pic">
+                        <img src="pic/roomRefer_01.jpeg" alt="roomimg">
+                    </div>
+                    <div class="txt">
+                        <p>201房型</p>
+                        <p> 價錢:4,200元</p>
+                        <a href="#" class="btn">預約</a>
+                    </div>
+                </article>
+                <article class="roomReferCell">
+                    <div class="pic">
+                        <img src="pic/roomRefer_02.jpeg" alt="roomimg">
+                    </div>
+                    <div class="txt">
+                        <p>301房型</p>
+                        <p> 價錢:4,200元</p>
+                        <a href="#" class="btn">預約</a>
+                    </div>
+                </article>
+                <article class="roomReferCell">
+                    <div class="pic">
+                        <img src="pic/roomRefer_03.jpeg" alt="roomimg">
+                    </div>
+                    <div class="txt">
+                        <p>401房型</p>
+                        <p> 價錢:4,200元</p>
+                        <a href="#" class="btn">預約</a>
+                    </div>
+                </article>
+            </article>
+        </section>
+        <section>
+            <section>
+                <article class="viewpoint">
+                    <h2>周邊環境</h2>
+                        <article class="viewpointCell">
+                            <h3>屏東縣民公園</h3>
+                            <div class="pic">
+                                <a href="https://goo.gl/maps/un4oZhU3vLGQAqBK8">
+                                    <img src="pic/viewpoint_01.jpeg" alt="景點圖">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p>距離:2.7公里</p>
+                            </div>
+                        </article>
+                        <article class="viewpointCell">
+                            <h3>屏東觀光夜市</h3>
+                            <div class="pic">
+                                <a href="https://goo.gl/maps/GrPGeqUh1ydCxYLF7">
+                                    <img src="pic/viewpoint＿nightmarket.jpg" alt="景點圖">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p>距離:1.7公里</p>
+                            </div>
+                        </article>
+                        <article class="viewpointCell">
+                            <h3>下淡水溪鐵橋</h3>
+                            <div class="pic">
+                                <a href="https://goo.gl/maps/gec8GcJ4NWrNYpWm7">
+                                    <img src="pic/viewpoint_Ironbridge.jpg" alt="景點圖">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p>距離:9.8公里</p>
+                            </div>
+                        </article>
+                        <article class="viewpointCell">
+                            <h3>勝利星村創意生活園區</h3>
+                            <div class="pic">
+                                <a href="https://goo.gl/maps/QvvyCsfFTvQCQVHBA">
+                                    <img src="pic/viewpoint_VIPZONE.png" alt="景點圖">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p>距離:1.7公里</p>
+                            </div>
+                        </article>
+                </article>
+                
+            </section> 
+        </section>
+        <section >
+            <article class="contactUs">
+                <div>
+                    <h2>聯絡我們</h2>
+                </div>
+                <article class="txt">
+                    <h3>聯絡資訊</h3>
+                    <div>
+                        <p>地址:屏東市勝利東路OOO號</p>
+                        <p>時間:08:00~22:00</p>
+                        <p>電話:0988-888888</p>
+                        <p>電子信箱:lujun@gmail.com</p>
+                        <p>北緯： 22.67656N</p>
+                        <p>東經： 120.50001E</p>
+                    </div>
+                </article> 
+                <article class="contactBlock">
+                    <h3>線上提問</h3>
+                    <form action="#">
+                        <label>
+                            <input type="text" required placeholder="名稱">
+                            <span>名稱</span>
+                        </label>
+                        <label>
+                            <input type="email" required placeholder="電子信箱">
+                            <span>電子信箱</span>
+                        </label>
+                        <label>
+                            <input type="text" required placeholder="標題">
+                            <span>標題</span>
+                        </label>
+                        <label>
+                            <textarea name="" id="" cols="30" rows="3" placeholder="問題描述"></textarea>
+                            <span>問題描述</span>
+                        </label>
+                        <input type="reset" value="取消" class="rebtn">
+                        <input type="button" value="確認送出" class="btn">
+                        
+                    </form>
+                </article>
+            </article>
+        </section>
+        <article class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.17369055756956!2d120.49972702680269!3d22.676538962727125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4730c2eebf621ba1!2zMjLCsDQwJzM1LjYiTiAxMjDCsDMwJzAwLjAiRQ!5e0!3m2!1szh-TW!2stw!4v1640447541437!5m2!1szh-TW!2stw" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </article>
+
+        <style>
+            /* https://animista.net/play/basic/slide-fwd */
+            @keyframes scale-out-center {
+                0% {
+                    -webkit-transform: scale(1);
+                            transform: scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    -webkit-transform: scale(0.5);
+                            transform: scale(0.5);
+                    opacity: 0;
+                }
+            }
+
+            
+            
+        </style>
+
+    </main>
+    
+
+
+
+
+
+    <!-- ----------------民宿介紹---------------- -->
+    <!--  -->
+    <!-- ----------------民宿介紹ＥＮＤ---------------- -->
+    <!-- ----------------活動介紹---------------- -->
+    <!-- <section>
+        <div class="activity">
+            <h2>活動介紹</h2>
+            <div>
+                <div class="activitytime">
+                    <div>
+                        <p>活動日期:</p>
+                        <p>2021</p>
+                    </div>
+                    <div class="activityday">
+                        <p>01號 ooo活動</p>
+                        <p>13號 ooo活動</p>
+                        <p>21號 ooo活動</p>
+                    </div>
+                    
+                </div>
+                <div class="activitytxt">
+                    <div>
+                        <div>
+                            <p>ooo活動</p>
+                            <p>oo/oo ~ oo/oo</p>
+                        </div>
+                        <div class="txt">
+                            <p>活動內容:</p>
+                            <p>活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>如何參加:ooooo</p>
+                        <p>參加限制:ooooo</p>
+                        <p>活動地點:ooooo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ----------------活動介紹ＥＮＤ---------------- -->
+    <!-- ----------------環境介紹---------------- -->
+    <!-- <section>
+        <div class="viewpoint">
+            <h2>周邊環境</h2>
+            <div>
+                <div class="viewpointCell">
+                    <h3>屏東縣民公園</h3>
+                    <img src="pic/viewpoint_01.jpeg" alt="景點圖">
+                    <div class="txt">
+                        <p>距離:2.7公里</p>
+                    </div>
+                </div>
+                <div class="viewpointCell">
+                    <h3>屏東觀光夜市</h3>
+                    <img src="pic/viewpoint＿nightmarket.jpg" alt="景點圖">
+                    <div class="txt">
+                        <p>距離:1.7公里</p>
+                    </div>
+                </div>
+                <div class="viewpointCell">
+                    <h3>下淡水溪鐵橋</h3>
+                    <img src="pic/viewpoint_Ironbridge.jpg" alt="景點圖">
+                    <div class="txt">
+                        <p>距離:9.8公里</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section> -->
+    
+    <footer>
+        <div class="footerLogo">
+            <a href="#"><img src="pic/instagram.svg" alt="InstagramLogo"></a>
+            <a href="#"><img src="pic/line.svg" alt="LineLogo" data-note="1111"></a>
+            <a href="#"><img src="pic/facebook.svg" alt="FacebookLogo"></a>
+            <a href="#"><img src="pic/youTube2.svg" alt="YoutubeLogo"></a>
+        </div>
+        <div class = "copyright">Copyright © 2022 CWjyun 僅供學習、展示用</div>
+    </footer>
+    
+
+    <!-- ---------------------OwlCarousel slider--------------------- --> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="expansion/owlCarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel(
+                {
+                    dots:true,
+                    loop:true,
+                    mouseDrag:true,
+                    center:true,
+                    margin:10,
+                    responsiveClass:true,
+                    autoplay:true,
+                    utoplayTimeout:5000,
+                    autoplayHoverPause:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                            nav:false
+                        },
+                        768:{
+                            items:1,
+                            nav:true
+                        },
+                        1200:{
+                            items:1,
+                            nav:true,
+                            // mouseDrag:true,
+                            // loop:false
+                        }
+                    }
+                });
+        });
+    </script>
+
+</body>
+</html>
