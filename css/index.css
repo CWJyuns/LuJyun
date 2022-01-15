@@ -12,6 +12,7 @@
     width: 50%;
     padding: 10px;
     box-sizing: border-box;
+    
    
 }
 .viewpointCell .pic img{
@@ -23,6 +24,7 @@
     overflow: hidden;
     border-radius: 10px;
     aspect-ratio: 2/1;
+    box-shadow: 2px 2px 5px 2px #999;
 }
 .viewpointCell  h3,.viewpointCell  .txt{
     color: #fff;
@@ -68,6 +70,7 @@
         opacity: 0;
         
     }
+  
     .viewpointCell:hover  h3{
         opacity: 1;
         transition: opacity 1s 0s;
@@ -78,6 +81,9 @@
         z-index: 10;
         transition: transform 1s 0s;
 
+    }
+    .viewpointCell:active{
+        transform: scale(0.9);
     }
    
 }

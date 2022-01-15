@@ -1,0 +1,165 @@
+.determineRoom .pic img{
+    width: 100%;
+    vertical-align: top;
+    border-radius: 10px;
+}
+header nav a.btn {
+    visibility: hidden;
+}
+.checkInData{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.checkInData form{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 15px;
+    
+}
+.checkInData label,.checkInData label input{
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+}
+.checkInData label{
+    position: relative;
+    margin-top: 2em;
+}
+.checkInData label input{
+    border: none;
+    padding: 0px 1em;
+    letter-spacing: 0.1em;
+    font-size: 15px;
+}
+.checkInData label input{
+    line-height: 2em;
+    border-radius: 200px;
+}
+.checkInData input:placeholder-shown +span{
+    top: 0;
+    left: 1em;
+    color: #632E0A88;
+}
+.checkInData input::placeholder,.checkInData textarea::placeholder{
+    visibility: hidden;
+}
+.checkInData span,.checkInData input:focus ~ span{
+    position: absolute;
+    color: #632E0A;
+    line-height: 2em;
+    top: 0;
+    transition: 0.3s;
+    top: -1.6em;
+    left: 0.5em;
+    transition: all 0.3s;
+}
+.checkInData .btn ,.checkInData .rebtn,.contactUs .txt::after{
+    cursor: pointer;
+    background-color: #632E0Aee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+    padding:0.3rem 1.0rem;
+    letter-spacing: 0.1em;
+    width: 48%;
+    border: 2px solid #632E0Aee;
+    display: inline-block;
+    margin-top: 1em;
+}
+.checkInData .btn{
+    color: #fff;
+}
+.checkInData .rebtn{
+    color: #632E0Aee;
+    border: 2px solid #632E0Aee;
+    background-color: transparent;
+}
+
+.determine{
+    max-width: 1200px;
+    margin: auto;
+    font-size: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.determineRoom,.money{
+    font-size: 15px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.determineRoom{
+    width: 70%;
+}
+.determineRoom .pic{
+    width: 40%
+}
+.determineRoom .txt{
+    box-sizing: border-box;
+    padding: 0px 30px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.determineRoom .txt div{
+    /* margin: auto; */
+    width: 100%;
+}
+.money{
+    /* padding: 40px; */
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.money div{
+    width: 100%;
+    
+}
+.determineRoom .txt div span:empty::before{
+    content: "請選擇";
+    margin-left: 1em;
+    letter-spacing: 0.1em;
+    background-color: #F9BC20;
+    color: #222;
+    box-shadow: 1px 1px 2px 1px #bbb;
+    border-radius: 200px;
+    padding: 0.2em 1em;
+    cursor: pointer;
+}
+.determineRoom .txt div:active span:empty::before{
+    background-color: #A13B91;
+    color: #eee;
+    transition: all .2s; 
+}
+.determineRoom .txt div span::after{
+    margin-left: 1em;
+}
+.determineRoom .txt div:nth-child(1) span::after{
+    content: "房";
+}
+.determineRoom .txt div:nth-child(3) span::after{
+    content: "人";
+}
+.money div span::after{
+    margin-left: 1em;
+}
+.money div:nth-child(1) span::after{
+    content: ' 元/晚';
+}
+.money div:nth-child(2) span::after{
+    content: ' 元';
+}
+.money div:nth-child(3) span::after{
+    content: ' 元';
+}
+
