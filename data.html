@@ -37,17 +37,19 @@
             width: 100%;
             box-sizing: border-box;
         }
-        .canAppointment:hover{
+        .canAppointment:hover span{
             background-color: #afa;
+            border-radius: 50%;
 
         }
-        .selectday{
+        .selectday span{
             background-color: #afa;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
-    <div class="selectRoom">
+<div class="selectRoom">
     <div class="date">
         <table>
             <caption><span class="leftBtn"></span><span id="year"></span>年<span id="month"></span>月<span class="rightBtn"></span></caption>
@@ -159,7 +161,9 @@
     //建立td並新增至對應的容器
     function createTd(text){
         var td = document.createElement('td');
-        td.innerHTML = text;
+        var span = document.createElement('span');
+        span.innerHTML = text;
+        td.append(span)
         if(text != ""){
             td.classList.add("canAppointment")
         }

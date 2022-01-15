@@ -313,7 +313,16 @@ h2{
     .contactBlock{
         display: none;
     }
-
+    .contactUs .txt>.btn{
+        border: none;
+        box-shadow: 1px 1px 5px 1px #aaa;
+        color: #fff;
+        border: 2px solid #632E0Aee;
+        background-color: #632E0Aee;
+        margin: auto;
+        display: block;
+        /* color: #632E0A; */
+    }
     /* ------------------------ 客房介紹 ------------------------ */
     .roomRefer{
         background-size: 14000px auto;
@@ -348,7 +357,9 @@ h2{
     .contactUs .txt{
         width: 40%;
     }
-
+   .contactUs .txt>.btn{
+       display: none;
+   }
 
     /* ------------------------ 客房介紹 ------------------------ */
     .roomRefer > article{
@@ -394,4 +405,26 @@ h2{
         padding: 0px 60px;
     }
     
+}
+
+
+
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+    position: relative;
+    animation: showAnimation 1s;
+}
+
+@keyframes showAnimation {
+    0%{
+       left: -100vw;
+    }
+    100%{
+        /* transform: scale(2); */
+        left: 0;
+    }
 }

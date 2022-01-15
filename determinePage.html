@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
     <title>廬竣-預約確認-</title>
     <!-- ---------------------CSS Reset--------------------- -->
     <link rel="stylesheet" href="css/cssReset.css">
@@ -42,8 +42,89 @@
             </div>
         </nav>
     </header>
+
+
+
     
+<style>
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+        @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+        .list {
+            max-width: 1200px;
+            margin: auto;
+            box-sizing: border-box;
+            padding: 40px 10%;
+
+        }
+        .list ol{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+           
+
+        }
+        .list li{
+            font-family: 'Noto Sans TC',sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 10%;
+            aspect-ratio: 1/1;
+            line-height: 2em;
+            /* background-color: #fff; */
+            background-image: linear-gradient(0deg,#185a9d,#43cea2);
+            border-radius: 50%;
+            justify-content: center;
+            position: relative;
+            font-size: 20px;
+            color: #fff;
+            box-shadow: 0px 0px 0px 4px #fff;
+        }
+        .list li + li{
+            /* margin-left: 100px; */
+        }
+        .list li + li::before{
+            content: '';
+            position: absolute;
+            width: 100px;
+            z-index: -1;
+            box-shadow: 0px 0px 0px 3px #fff;
+            height: 5px;
+            background-color: #43cea2;
+            top: 0;
+            bottom: 0;
+            left: -100px;
+            margin: auto;
+        }
+        .list li.active ~ li{
+            background-image: linear-gradient(0deg,#999,#ccc);
+        }
+        .list li.active ~ li::before{
+            background-color: #999;
+        }
+</style>
     <section>
+        <!-- <article class="list">
+            <ol>
+                <li>
+                    <i class="fa fa-file-text" aria-hidden="true"></i>
+                    選擇房型
+                </li> 
+                <li class="active">
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                    選擇日期
+                </li>
+                <li>
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    資料填寫
+                </li>
+                <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    完成預定
+                </li>
+            </ol>
+        </article> -->
         <article class="determine">
             <article class="determineRoom">
                 <div class="pic">
@@ -84,19 +165,170 @@
             </article>
         </article>
     </section>
-    <section>
+    <section class="selectpage">
         <h2>選項</h2>
-        <article>
-
+        <article class="selectRoom">
+            <h3>選擇房型</h3>
+            <article>
+                <div class="pic">
+                    <img src="pic/roomRefer_01.jpeg" alt="roomimg">
+                </div>
+                <div class="txt">
+                    <p>201房</p>
+                    <p> 價錢:4,200元</p>
+                </div>
+            </article>
+            <article>
+                <div class="pic">
+                    <img src="pic/roomRefer_02.jpeg" alt="roomimg">
+                </div>
+                <div class="txt">
+                    <p>301房</p>
+                    <p> 價錢:4,200元</p>
+                </div>
+            </article>
+            <article>
+                <div class="pic">
+                    <img src="pic/roomRefer_03.jpeg" alt="roomimg">
+                </div>
+                <div class="txt">
+                    <p>401房</p>
+                    <p> 價錢:4,200元</p>
+                </div>
+            </article>
         </article>
-        <article>
-            
+        <article class="selectDate">
+            <h3>選擇日期</h3>
+            <div class="date">
+                <table>
+                    <caption><span class="leftBtn"></span><span id="year"></span>年<span id="month"></span>月<span class="rightBtn"></span></caption>
+                    <thead>
+                        <tr>
+                            <td>日</td>
+                            <td>一</td>
+                            <td>二</td>
+                            <td>三</td>
+                            <td>四</td>
+                            <td>五</td>
+                            <td>六</td>
+                        </tr>
+                    </thead>
+                    <tbody id="datestable">
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn">確定</button>
         </article>
     </section>
 
-<style>
 
-</style>
+
+
+
+    <script>
+        var yearSelect ;
+        var monthSelect ;
+        var datestable ;
+        var nowdate;
+        var rightBtn;
+        var leftBtn;
+        var month;
+        var year;
+        var selectday;
+        var selectDayObj = { 
+            year:0000,
+            month:00,
+            day:00,
+        }
+        var selectDay = [selectDayObj,selectDayObj]
+        
+        //初始化
+        window.addEventListener("load",function(){
+            yearSelect = document.getElementById('year');
+            monthSelect = document.getElementById('month');
+            datestable = document.getElementById('datestable');
+            rightBtn =  document.getElementsByClassName('rightBtn')
+            leftBtn = document.getElementsByClassName('leftBtn')
+           
+            var nowdate = new Date();       //獲取當前的日期
+            year = nowdate.getFullYear();
+            month = nowdate.getMonth();
+            showDates();                  //呼叫顯示日期的函式
+            rightBtn[0].addEventListener("click",function(){    
+                dateChange(1)
+            });
+            leftBtn[0].addEventListener("click",function(){    
+                dateChange(-1)
+            });
+            
+        })
+        function selectBtnCreate(){
+            selectday = document.querySelectorAll(".canAppointment")
+            selectday.forEach( e => {
+                e.addEventListener("click",()=>{
+                    e.classList.add("selectday")
+                    selectDay[0].year = year;
+                    selectDay[0].month = month + 1;
+                    selectDay[0].day = e.innerHTML;
+                });
+            });
+        }
+        function dateChange(number){
+            if((month + number) < 0){
+                year += number;
+                month = 11
+            }else if((month + number) > 11){
+                year += number;
+                month = 0
+            }else{
+                month += number;
+            }
+            showDates();  
+        }
+      
+        //獲取選擇的年月的第一天是星期幾 
+        // function getDays(year,month){
+        //     var d = new Date(year,month);
+        //     return d.getDay();
+        // }
+        //改變月曆日期
+        function showDates(){
+            yearSelect.innerHTML = year;
+            monthSelect.innerHTML = (`${month + 1}`).padStart(2, '0');
+            datestable.innerHTML= "";
+            var yearsm = parseInt(yearSelect.innerHTML);
+            var monthsm = parseInt(monthSelect.innerHTML);
+            // var nullnumber = getDays(year,month - 1); //當月星期幾開始 
+            var nullnumber = new Date(yearsm,monthsm - 1).getDay(); //當月星期幾開始 
+            var allnumber = nullnumber + new Date(yearsm,monthsm,0).getDate() ; //算出這月星期過開使+算出這個月有幾天
+            // document.write(allnumber)
+            //建立空的li
+            var tr = document.createElement('tr');
+            for(var k = 1; k <= allnumber ;k++){
+                tr.appendChild(createTd((k <= nullnumber) ?  "":(k - nullnumber) ));
+                if(k != 0 && k%7 == 0){
+                    datestable.appendChild(tr)
+                    tr = document.createElement('tr')
+                } 
+            }
+            datestable.appendChild(tr)
+            selectBtnCreate()
+        }
+        //建立td並新增至對應的容器
+        function createTd(text){
+            var td = document.createElement('td');
+            var span = document.createElement('span');
+            span.innerHTML = text;
+            td.append(span)
+            if(text != ""){
+                td.classList.add("canAppointment")
+            }
+            return td;
+        }
+        </script>
+    
+
+
 
 
     <!-- ----------------頁尾---------------- -->

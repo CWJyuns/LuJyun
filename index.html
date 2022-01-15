@@ -230,6 +230,7 @@
                         <p>北緯： 22.67656N</p>
                         <p>東經： 120.50001E</p>
                     </div>
+                    <button class="btn">線上提問</button>
                 </article> 
                 <article class="contactBlock">
                     <h3>線上提問</h3>
@@ -282,7 +283,27 @@
 
     </main>
     
-
+    <script>
+        let contactUsBtn;
+        let contactUsTxt;
+        let contactBlock;
+        let contactUsreBtn;
+        window.addEventListener('load',function(){
+            contactUsBtn = document.querySelector('.contactUs .txt>.btn') ;
+            contactUsTxt = document.querySelector('.contactUs .txt') ;
+            contactBlock = document.querySelector('.contactBlock') ;
+            contactUsreBtn = document.querySelector('.contactBlock .rebtn') ;
+            contactUsBtn.addEventListener('click',() =>{
+                contactUsTxt.classList.add('hide');
+                contactBlock.classList.add('show');
+            });
+            contactUsreBtn.addEventListener("click",()=>{
+                contactBlock.classList.remove('show');
+                contactUsTxt.classList.remove('hide');
+                
+            });
+        });
+    </script>
 
 
 
