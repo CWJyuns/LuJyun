@@ -63,6 +63,7 @@
                 <div class="txt">
                     <p>同樣擁有全落地景觀窗與獨立陽台，空間卻是更寬闊的設計，浴室也同樣的做了空間的升級，喜愛寬闊雙人房的您，我們給了您這樣的推薦! </p>
                     <p><span>〈週日至週四：4,000元〉</span> <span>〈週五、週六：4,300元〉</span><span>〈定價：5,000元〉</span><span>〈暑期週日至週四：5,000元〉</span><span>〈暑期週五、週六：5,200元〉</span></p>
+                    <a href="determinePage.html" class="btn">預定</a>
                 </div>
             </article>
             
@@ -73,15 +74,15 @@
                     <div>
                         <img src="pic/roomRefer_02.jpeg" alt="">
                         <img src="pic/bathroom_02.jpg" alt="">
-                        <img src="pic/roomRefer_02.jpeg" alt="">
-                        <img src="pic/roomRefer_02.jpeg" alt="">
-                        <img src="pic/roomRefer_02.jpeg" alt="">
-                        <img src="pic/roomRefer_02.jpeg" alt="">
+                        <img src="pic/roomRefer_021.jpeg" alt="">
+                        <img src="pic/roomRefer_022.jpeg" alt="">
+                        <img src="pic/roomRefer_023.jpeg" alt="">
                     </div>    
                 </div>
                 <div class="txt">
                     <p>同樣擁有全落地景觀窗與獨立陽台，空間卻是更寬闊的設計，浴室也同樣的做了空間的升級，喜愛寬闊雙人房的您，我們給了您這樣的推薦! </p>
                     <p><span>〈週日至週四：4,000元〉</span> <span>〈週五、週六：4,300元〉</span><span>〈定價：5,000元〉</span><span>〈暑期週日至週四：5,000元〉</span><span>〈暑期週五、週六：5,200元〉</span></p>
+                    <a href="determinePage.html" class="btn">預定</a>
                 </div>
             </article>
             <article class="room">
@@ -100,6 +101,7 @@
                 <div class="txt">
                     <p>同樣擁有全落地景觀窗與獨立陽台，空間卻是更寬闊的設計，浴室也同樣的做了空間的升級，喜愛寬闊雙人房的您，我們給了您這樣的推薦! </p>
                     <p><span>〈週日至週四：4,000元〉</span> <span>〈週五、週六：4,300元〉</span><span>〈定價：5,000元〉</span><span>〈暑期週日至週四：5,000元〉</span><span>〈暑期週五、週六：5,200元〉</span></p>
+                    <a href="determinePage.html" class="btn">預定</a>
                 </div>
             </article>
         </section>
@@ -115,5 +117,26 @@
         </div>
         <div class = "copyright">Copyright © 2022 CWjyun 僅供學習、展示用</div>
     </footer>
+    <script>
+        let selectimg;
+        let changeimg;
+        window.addEventListener('click',()=>{
+            changeimg = document.querySelectorAll('.room .pic>img');
+            selectimg = document.querySelectorAll('.room .pic>div img');
+            selectimg.forEach( (e,index)=>{
+                e.addEventListener('click',()=>{
+                    if( index<5 ){
+                        changeimg[0].src = e.src;
+                    }else if(index >= 5 && index < 10 ){
+                        changeimg[1].src = e.src;
+                    }else if(index >= 10  ){
+                        changeimg[2].src = e.src;
+                    }
+                })
+                
+            })
+
+        })
+    </script>
 </body>
 </html>

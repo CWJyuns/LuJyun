@@ -1,12 +1,95 @@
+section{
+    width: 100%;
+    max-width: 1200px ;
+    margin: auto;
+}
+section h2{
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    line-height: 3em;
+    align-items: center;
+    padding: 0px 50px;
+}
+section h2::after,section h2::before{
+    content: "";
+    width: 0.2em;
+    height: 0.2em;
+    margin: 0px 1em;
+    border-radius: 300px;
+    transition: flex-grow 2s ;
+}
+section:hover h2::after,section:hover h2::before{
+    flex-grow: 1;
+    transition: flex-grow 2s ;
+}
+section h2::before{
+    background-image: linear-gradient( to left, #632E0Aee 70%,transparent );
+}
+section h2::after{
+    background-image: linear-gradient( to right, #632E0Aee 70%,transparent );
+}
+
 .selectRoom .pic img{
     vertical-align: top;
     aspect-ratio: 2/1;
     object-fit: cover;
     width: 100%;
 }
-.selectRoom .pic {
-    width:40%;
+.selectRoom .pic p{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2em;
+    background-color: #222a;
+    color: #eee;
+    position: relative;
+    margin-top: -2em;
 }
+
+@media screen and (max-width:767px) {
+    .selectRoom .pic img{
+        max-height: 200px;
+        object-fit: cover;
+        /* width: 100%; */
+    }
+    .selectRoom .pic{
+        width: 100%;
+    }
+   
+    .selectRoom .selectDate{
+        width: 100%;
+        padding: 10px 10%;
+        margin: auto;
+    }
+   
+    .selectRoom + .selectRoom{
+        margin-top: 30px;
+    }
+}
+@media screen and (min-width:768px) {
+    article.selectRoom:hover{
+        background-color: #A13B9188;
+        transition: all 1s;
+        border-radius: 10px;
+    }
+    .selectRoom .pic {
+        width:40%;
+        border-radius: 10px;
+        overflow: hidden;
+        align-self:center ;
+    }
+    article.selectRoom{
+        /* align-items: center; */
+        padding: 50px 30px ;
+        box-sizing:border-box;
+    }
+    .selectRoom a.btn{
+        align-self:flex-end;
+        margin: 0px auto;
+    }
+}
+
 .selectRoom{
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +100,7 @@
     /* padding: 20px 30px; */
     border-radius: 10px;
     margin: auto;
-    background-color: #FBF2E1;     
+    /* background-color: #FBF2E1;      */
     color: #3A3030;
 }
 .date{
