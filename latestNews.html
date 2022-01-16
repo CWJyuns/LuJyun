@@ -53,23 +53,24 @@
             
         </article>
         <article class="news">
-            <article class="newsCell" data-note="發布日期：2021-01-01">
+            <article class="newsCell hide" data-note="發布日期：2021-01-01">
                 <div class="pic">
-                    <img src="" alt="">
+                    <img src="pic/discount_01.jpeg" alt="">
                 </div>
                 <div class="txt">
                     <h3>防疫公告</h3>
                     <p>遵循政府政策，嚴格實施防疫措施，以維護住宿者的健康安全。顧客進入時須配戴口罩、量測體溫、用酒精消毒、掃描QRcode簡訊實聯制；將餐廳座位間距拉開，以維持社交安全距離；定時清潔民宿場域並加強消毒，且大廳、餐廳、停車場等各場域出入口備有酒精，提供給顧客消毒；房客退房後進行客房徹底清潔消毒、落實房卡殺菌消毒；對內也嚴格執行防疫工作，員工上下班必須量測體溫、消毒，致力杜絕任何染疫的風險，以提供旅客們安全無虞的環境。</p>
                 </div>
             </article>
-            <article class="newsCell" data-note="活動期間：2022/1/10-2022/1/20">
+            <article class="newsCell hide" data-note="活動期間：2022/1/10-2022/1/20">
                 <div class="pic">
-                    <img src="" alt="">
+                    <img src="pic/roomRefer_012.jpeg" alt="">
                 </div>
                 <div class="txt">
                     <h3>1/10~1/20官網預定享9折</h3>
                     <p>1/10~1/20官網預定享9折,住宿適用期間：2022/1/10-2022/2/12.</p>
                     <ul>
+                        <li><h4>專案說明</h4></li>
                         <li>本活動限住房含早餐專案適用，其他優惠與特殊專案恕不配合。</li>
                         <li>本活動房價以官網公告的標準房價計算。</li>
                         <li>本活動恕不與其他優惠併用</li>
@@ -77,9 +78,9 @@
                     </ul>
                 </div>
             </article>
-            <article class="newsCell" data-note="活動期間：2022/1/10-2022/1/20">
+            <article class="newsCell hide" data-note="活動期間：2022/1/10-2022/1/20">
                 <div class="pic">
-                    <img src="" alt="">
+                    <img src="pic/roomRefer_04.jpeg" alt="">
                 </div>
                 <div class="txt">
                     <h3>春季旅行專案</h3>
@@ -108,5 +109,22 @@
         </div>
         <div class = "copyright">Copyright © 2022 CWjyun 僅供學習、展示用</div>
     </footer>
+    <script>
+        let newsCell;
+        window.addEventListener('load',()=>{
+            newsCell = document.querySelectorAll('.newsCell')
+            newsCell.forEach((e)=>{
+                e.addEventListener('click', ()=>{
+                    newsCell.forEach((e)=>{
+                        e.classList.add('hide')
+                    });
+                    e.classList.remove('hide')
+                });
+            });
+        });
+        // newsCell.forEach((e)=>{
+                    //     e.classList.add('hide')
+                    // });
+    </script>
 </body>
 </html>
