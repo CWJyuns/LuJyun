@@ -408,17 +408,14 @@ h2{
 }
 
 
-
-
 .hide{
-    display: none;
+    display: none ;
 }
 .show{
-    display: block;
+    display: block ;
     position: relative;
     animation: showAnimation 1s;
 }
-
 @keyframes showAnimation {
     0%{
        left: -100vw;

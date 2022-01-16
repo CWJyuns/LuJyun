@@ -96,7 +96,8 @@ header nav a.btn {
     box-sizing: border-box;
 }
 .determineRoom{
-    width: 70%;
+    width: 100%;
+    /* width: 70%; */
 }
 .determineRoom .pic{
     width: 40%
@@ -113,9 +114,11 @@ header nav a.btn {
 .determineRoom .txt div{
     /* margin: auto; */
     width: 100%;
+    line-height: 2em;
 }
 .money{
     /* padding: 40px; */
+    line-height: 3em;
     width: 30%;
     display: flex;
     flex-wrap: wrap;
@@ -315,6 +318,12 @@ caption{
     .selectRoom>article .txt{
         padding: 20px 30px;
     }
+    .determineRoom{
+        width: 70%;
+    }
+    .money{
+        width: 30%;
+    }
 }
 @media screen and (min-width:996px) {
     .selectDate,.selectRoom{
@@ -368,6 +377,14 @@ caption{
     transition: background-color 0.3s ,transform 0.5s;
 }
 
+.showSelectPage{
+    display: flex !important;
+    animation: showAnimation 1s both ;
+}
+.show{
+    display: block !important;
+}
+
 
 .selectDate{
     display: none;
@@ -377,4 +394,13 @@ caption{
 }
 .selectpage{
     display: none;
+}
+
+@keyframes showAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

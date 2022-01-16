@@ -220,12 +220,65 @@
             <button class="btn">確定</button>
         </article>
     </section>
+    <script>
+        let selectRoomBtn;
+        let selectDateBtn;
+        let selectPeopleNumberBtn;
+        let selectPage;
+        let selectRoomPage;
+        let selectDatePage;
+        let selectDatePageBtn;
+        let selectRoomPageCell;
+        window.addEventListener("load",()=>{
+            selectRoomBtn = document.querySelector('.determineRoom .txt div:nth-child(1)')
+            selectDateBtn = document.querySelector('.determineRoom .txt div:nth-child(2)')
+            selectPeopleNumberBtn = document.querySelector('.determineRoom .txt div:nth-child(3)')
+            selectPage = document.querySelector('.selectpage')
+            selectRoomPage = document.querySelector('.selectRoom')
+            selectDatePage = document.querySelector('.selectDate')
+            selectRoomPageCell = document.querySelectorAll('.selectRoom>article')
+            selectDatePageBtn = document.querySelector('.selectDate > .btn ')
+            selectRoomBtn.addEventListener('click',()=>{
+                selectPage.classList.add('showSelectPage')
+                selectRoomPage.classList.add('show')
+            });
+            selectDateBtn.addEventListener('click',()=>{
+                selectPage.classList.add('showSelectPage')
+                selectDatePage.classList.add('show')
+            });
+            selectPeopleNumberBtn.addEventListener('click',()=>{
 
+            });
+            
+            // selectPage.addEventListener("click",(e)=>{
+            //     e.stopPropagation()
+            //     // e.preventDefault()
+            //     selectPage.classList.remove('showSelectPage')
+            //     selectDatePage.classList.remove('show')
+            //     selectRoomPage.classList.remove('show')
+               
+            // },true);
+            selectDatePageBtn.addEventListener('click',()=>{
+                selectPage.classList.remove('showSelectPage')
+                selectDatePage.classList.remove('show')
+            });
+            selectRoomPageCell.forEach(e => {
+                e.addEventListener('click',()=>{
+                    // document.write(e.innerHTML);
+                    selectPage.classList.remove('showSelectPage')
+                    selectRoomPage.classList.remove('show')
+
+                })
+                
+            });
+        });
+    </script>
 
 
 
 
     <script>
+        let selseDayArray = ['','']
         var yearSelect ;
         var monthSelect ;
         var datestable ;
@@ -235,12 +288,6 @@
         var month;
         var year;
         var selectday;
-        var selectDayObj = { 
-            year:0000,
-            month:00,
-            day:00,
-        }
-        var selectDay = [selectDayObj,selectDayObj]
         
         //初始化
         window.addEventListener("load",function(){
@@ -267,9 +314,12 @@
             selectday.forEach( e => {
                 e.addEventListener("click",()=>{
                     e.classList.add("selectday")
-                    selectDay[0].year = year;
-                    selectDay[0].month = month + 1;
-                    selectDay[0].day = e.innerHTML;
+                    if(selseDayArray[0] == ''){
+                        selseDayArray[0] = `${year}`+`${(month + 1)}`.padStart(2, '0')+`${(e.innerHTML)}`.padStart(2, '0')
+                    }
+                    if(/selectday/.text(e.classList)){
+                        document.write('aaaaaa')
+                    }
                 });
             });
         }
@@ -325,6 +375,7 @@
             }
             return td;
         }
+
         </script>
     
 
