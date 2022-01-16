@@ -1,175 +1,116 @@
-section>div{
-    width: 1200px;
-    margin: auto;
-    padding: 30px 0px;
-}
-.date{
-    display: flex;
-    flex-wrap: wrap;
-}
-.date div{
-    width: calc(100% / 7 - 20px);
-    /* height: 100px; */
-    /* aspect-ratio: 1/1; */
-    margin: 10px;
-    background-color: #afa;
-}
-
-.date td{
-    vertical-align: middle;
-    text-align: center;
-    /* aspect-ratio: 1/1 ; */
-    line-height: 2.5em;
-}
-.date td span{
-    display: inline-block;
-    line-height: 2em;
-    width:  2em;
-    height: 2em;
-    vertical-align: middle;
-}
-.datestable td{
-    display: block;
-}
-.datestable td::before{
-    aspect-ratio: 1/1;
-    width: 100px;
-    height: 100px;
-    display: block;
-    background-color: #5D878C;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.date .full{
-    color: #0002;
-}
-table{
-    /* aspect-ratio: 1/1 ; */
-    box-sizing: border-box;
-    table-layout: fixed;
+.selectRoom .pic img{
+    vertical-align: top;
+    aspect-ratio: 2/1;
+    object-fit: cover;
     width: 100%;
-    height: 100%;
+}
+.selectRoom .pic {
+    width:40%;
 }
 .selectRoom{
     display: flex;
-    justify-content: space-between;
-    /* justify-content: center; */
-    align-items: center;
-    /* align-content: space-between; */
-
+    flex-wrap: wrap;
 }
-.btn{
-    color: #000d;
-    background-color: #FAF3B2;
-    padding: 5px 20px;
-    /* line-height: 3em; */
-    border-radius: 5px ;
-    font-weight: bold;
-    box-sizing: border-box;
-    
+
+
+
+
+
+.selectDate {
+    width: 30%;
+    box-sizing: border-box; 
+    /* padding: 20px 30px; */
+    border-radius: 10px;
+    margin: auto;
+    background-color: #FBF2E1;     
+    color: #3A3030;
 }
 .date{
-    width: calc((100% / 5)*2);
-    height: 100%;
-    box-sizing: border-box;
-    padding: 15px;
-}
-
-.selectRoom caption{
-    font-size: 18px;
-    padding: 20px;
+    /* margin: auto; */
     /* width: 100%; */
 }
-/* .selectRoom caption{
+
+.selectDate .date table{
+    font-size: 0px;
+}
+table,thead,tbody,caption,tr{
+    display: block;
+    width: 100%;
+}
+.selectDate caption{
+    font-size: 15px;
+    /* line-height: 4em */
+}
+
+.selectDate .date table td{
+    vertical-align: top;
+    display: inline-flex;
+    align-items:center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 15px;
+    aspect-ratio: 1/1;
+    width: calc( 100% / 7 );
+}
+.selectDate .date table td span{
+    width: 80%;
+    height: 80%;
     display: flex;
-    justify-content: space-between;
-} */
-/* .selectRoom caption::before,caption::after {
-    content: '';
+    align-items:center;
+    justify-content: center;
+}
+.leftBtn,.rightBtn{
     display: inline-block;
     width: 0.5em;
     height: 0.5em;
     border: solid #000000c0;
     border-width: 3px 0px 0px 3px;
     cursor: pointer;
-} */
-.selectRoom caption::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.leftBtn{
     transform: rotate(-45deg);
-    margin-right: 5em;
+    left: 0;
+    right: 50%;
     
 }
-.selectRoom caption::after{
+.rightBtn{
     transform: rotate(135deg);
-    margin-left: 5em;
+    right: 0;
+    left: 50%;
 }
-.selectRoom>div:last-child{
-    align-self: flex-end;
-    box-sizing: border-box;
-    /* height: 100%; */
-    padding: 30px 10px ;
-}
-
-.selectRoom .pic {
-    width: calc((100% / 5)*2);
-    padding: 15px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    overflow: hidden;
-    /* background-color: #fff; */
-}
-.selectRoom .pic p{
-    position: absolute;
-    margin-top: -2em;
-    line-height: 2em;
-    text-align: center;
-    width: 100%;
-    color: #ffffffe0;
-    background-color: #000000a0;
-    
-    letter-spacing: 0.2em;
-}
-.selectRoom .pic p::before{
-    content: '';
-    width: 100%;
-    height: 2em;
-    display: block;
-    position: absolute;
-    background: linear-gradient( transparent , #000000a0);
-    margin-top: -2em;
-}
-.selectRoom .pic>div{
-    box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
+caption{
+    line-height: 4em;
     position: relative;
-}
-.selectRoom .pic img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    vertical-align: top;
-}
-section h2{
-    font-size: 21px;
-    display: inline-block;
     box-sizing: border-box;
-    color: #ffffffef;
-    background-color: #6cbd9b;
-    padding: 10px 20px;
-    /* margin-left: 30px; */
-    border-radius: 10px;
-    text-shadow: 0px 0px 1px #0006;
-    letter-spacing: 0.1em;
-    margin-top: 30px;
-    margin-left: 20px;
 }
+.canAppointment:hover span {
+    background-color: #F9BC20;
+    border-radius: 50%;
 
-
-/* ------------------------- */
-header li:nth-child(2) a{
-    /* color: #000a; */
-    background-color: #0005;
-    text-shadow: none ;
-    /* padding: 20px 15px; */
+}
+.selectday span {
+    background-color: #F9BC20;
+    border-radius: 50%;
+    position: relative;
+    z-index: 5;
+}
+.selectRoom .btn{
+    background-color: #F9BC20;
+    border: none;
+    font-size: 15px;
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+    padding: 0.5em 1.5em;
+    color: #ffffff;
+    text-shadow: 0px 0.5px 2px  #000a;
+    box-shadow: 1px 1px 3px 1px #aaa;
+}
+.selectRoom .btn:active{
+    box-shadow: none;
 }

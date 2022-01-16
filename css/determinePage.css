@@ -1,3 +1,12 @@
+.selectRoom .txt p:first-child::after{
+    content: '房';
+}
+.selectRoom .txt p:last-child::after{
+    content: '元';
+}
+.selectRoom .txt p:last-child::before{
+    content: '價錢: ';
+}
 .determineRoom .pic img{
     width: 100%;
     vertical-align: top;
