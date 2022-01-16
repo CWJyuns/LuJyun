@@ -48,6 +48,7 @@ section h2::after{
 }
 
 @media screen and (max-width:767px) {
+    
     .selectRoom .pic img{
         max-height: 200px;
         object-fit: cover;
@@ -81,6 +82,7 @@ section h2::after{
     }
     article.selectRoom{
         /* align-items: center; */
+        margin: 10px;
         padding: 50px 30px ;
         box-sizing:border-box;
     }
@@ -188,6 +190,7 @@ caption{
     color: #ffffff;
     text-shadow: 0px 0.5px 2px  #000a;
     box-shadow: 1px 1px 3px 1px #aaa;
+    border-radius: 10px;
 }
 .selectRoom .btn:active{
     box-shadow: none;
