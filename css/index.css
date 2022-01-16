@@ -122,6 +122,7 @@
 }
 .selectNews > article:hover::after{
     border-color:  transparent transparent transparent #eee;
+    animation: moveone 1s infinite;
 }
 @keyframes move {
     0%{
@@ -140,6 +141,17 @@
         right: 0px;
     }
     100%{
+    }
+}
+@keyframes moveone {
+    0%{
+        right: 0;
+    }
+    50%{
+        right: 10px;
+    }
+    100%{
+        right: 0;
     }
 }
 @media screen and (max-width:995px) {

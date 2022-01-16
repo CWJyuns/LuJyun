@@ -52,13 +52,13 @@ function selectBtnCreate(){
     selectday = document.querySelectorAll(".canAppointment")
     selectday.forEach( e => {
         e.addEventListener("click",()=>{
-            e.classList.add("selectday")
+            e.classList.toggle("selectday")
             if(selseDayArray[0] == ''){
                 selseDayArray[0] = `${year}`+`${(month + 1)}`.padStart(2, '0')+`${(e.innerHTML)}`.padStart(2, '0')
             }
-            if(/selectday/.text(e.classList)){
-                document.write('aaaaaa')
-            }
+            // if(/selectday/.text(e.classList)){
+            //     document.write('aaaaaa')
+            // }
         });
     });
 }
@@ -111,7 +111,12 @@ function createTd(text){
     span.innerHTML = text;
     td.append(span)
     if(text != ""){
-        td.classList.add("canAppointment")
+        if(text == 10 || text == 15 || text == 18 || text == 27 ){
+            td.classList.add("canNotAppointment")
+        }else{
+            td.classList.add("canAppointment")
+        }
+        
     }
     return td;
 }

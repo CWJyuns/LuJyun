@@ -70,8 +70,10 @@ section h2::after{
 }
 @media screen and (min-width:768px) {
     article.selectRoom:hover{
-        background-color: #A13B9188;
-        transition: all 1s;
+        border: 10px solid #A13B9188;
+        transform: scale(1.05);
+        /* background-color: ; */
+        transition: all .5s;
         border-radius: 10px;
     }
     .selectRoom .pic {
@@ -194,4 +196,7 @@ caption{
 }
 .selectRoom .btn:active{
     box-shadow: none;
+}
+.canNotAppointment{
+    color: #ddd;
 }
