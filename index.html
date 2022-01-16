@@ -17,59 +17,7 @@
 
     <link rel="stylesheet" href="css/index.css"> 
     <style>
-        /* <!-- ---------------------OwlCarousel slider--------------------- --> */
-            .owl-carousel{
-                position: relative;
-                /* max-width: 1200px; */
-                margin: auto;
-            }
-            
-            .owl-theme .owl-nav [class*=owl-]{
-                display: block;
-                position: absolute;
-                top:0;
-                bottom: 0;
-                margin: 0px;
-                color:#FFFa;
-            }
-            .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
-                padding: 0px 10px !important ;
-            }
-            .owl-carousel .owl-nav button.owl-next{
-                border-radius: 100px 0px 0px 100px 
-            }
-            .owl-carousel .owl-nav button.owl-prev{
-                border-radius: 0px 100px 100px 0px ; 
-            }
-            .owl-next{
-                right: 0;
-            }
-            .owl-prev{
-                left: 0;
-            }
-            .owl-theme .owl-nav [class*=owl-]>span{
-                font-size: 80px;
-                color:#FFFa;
-            }
-            .owl-theme .owl-nav [class*=owl-]:hover{
-                /* background-color: #000; */
-                box-sizing: border-box;
-                background-color: #86979155;
-            }
-            .owl-dots{
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                
-            }
-            .myImgSlider > img{
-                aspect-ratio: 2/1;
-                object-fit: cover;
-                max-height: 500px;
-                width: 100%;
-            }
-        
+       
     </style>
 </head>
 <body>
@@ -283,103 +231,7 @@
 
     </main>
     
-    <script>
-        let contactUsBtn;
-        let contactUsTxt;
-        let contactBlock;
-        let contactUsreBtn;
-        window.addEventListener('load',function(){
-            contactUsBtn = document.querySelector('.contactUs .txt>.btn') ;
-            contactUsTxt = document.querySelector('.contactUs .txt') ;
-            contactBlock = document.querySelector('.contactBlock') ;
-            contactUsreBtn = document.querySelector('.contactBlock .rebtn') ;
-            contactUsBtn.addEventListener('click',() =>{
-                contactUsTxt.classList.add('hide');
-                contactBlock.classList.add('show');
-            });
-            contactUsreBtn.addEventListener("click",()=>{
-                contactBlock.classList.remove('show');
-                contactUsTxt.classList.remove('hide');
-                
-            });
-        });
-    </script>
 
-
-
-
-    <!-- ----------------民宿介紹---------------- -->
-    <!--  -->
-    <!-- ----------------民宿介紹ＥＮＤ---------------- -->
-    <!-- ----------------活動介紹---------------- -->
-    <!-- <section>
-        <div class="activity">
-            <h2>活動介紹</h2>
-            <div>
-                <div class="activitytime">
-                    <div>
-                        <p>活動日期:</p>
-                        <p>2021</p>
-                    </div>
-                    <div class="activityday">
-                        <p>01號 ooo活動</p>
-                        <p>13號 ooo活動</p>
-                        <p>21號 ooo活動</p>
-                    </div>
-                    
-                </div>
-                <div class="activitytxt">
-                    <div>
-                        <div>
-                            <p>ooo活動</p>
-                            <p>oo/oo ~ oo/oo</p>
-                        </div>
-                        <div class="txt">
-                            <p>活動內容:</p>
-                            <p>活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p>如何參加:ooooo</p>
-                        <p>參加限制:ooooo</p>
-                        <p>活動地點:ooooo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- ----------------活動介紹ＥＮＤ---------------- -->
-    <!-- ----------------環境介紹---------------- -->
-    <!-- <section>
-        <div class="viewpoint">
-            <h2>周邊環境</h2>
-            <div>
-                <div class="viewpointCell">
-                    <h3>屏東縣民公園</h3>
-                    <img src="pic/viewpoint_01.jpeg" alt="景點圖">
-                    <div class="txt">
-                        <p>距離:2.7公里</p>
-                    </div>
-                </div>
-                <div class="viewpointCell">
-                    <h3>屏東觀光夜市</h3>
-                    <img src="pic/viewpoint＿nightmarket.jpg" alt="景點圖">
-                    <div class="txt">
-                        <p>距離:1.7公里</p>
-                    </div>
-                </div>
-                <div class="viewpointCell">
-                    <h3>下淡水溪鐵橋</h3>
-                    <img src="pic/viewpoint_Ironbridge.jpg" alt="景點圖">
-                    <div class="txt">
-                        <p>距離:9.8公里</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </section> -->
-    
     <footer>
         <div class="footerLogo">
             <a href="#"><img src="pic/instagram.svg" alt="InstagramLogo"></a>
@@ -394,38 +246,7 @@
     <!-- ---------------------OwlCarousel slider--------------------- --> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="expansion/owlCarousel/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel(
-                {
-                    dots:true,
-                    loop:true,
-                    mouseDrag:true,
-                    center:true,
-                    margin:10,
-                    responsiveClass:true,
-                    autoplay:true,
-                    utoplayTimeout:5000,
-                    autoplayHoverPause:true,
-                    responsive:{
-                        0:{
-                            items:1,
-                            nav:false
-                        },
-                        768:{
-                            items:1,
-                            nav:true
-                        },
-                        1200:{
-                            items:1,
-                            nav:true,
-                            // mouseDrag:true,
-                            // loop:false
-                        }
-                    }
-                });
-        });
-    </script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>

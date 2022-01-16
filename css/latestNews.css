@@ -1,9 +1,35 @@
+section h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+}
+section h2::after,section h2::before{
+    content: "";
+    width: 0.2em;
+    height: 0.2em;
+    margin: 0px 1em;
+    border-radius: 300px;
+    transition: flex-grow 2s ;
+}
+section:hover h2::after,section:hover h2::before{
+    flex-grow: 1;
+    transition: flex-grow 2s ;
+}
+section h2::before{
+    background-image: linear-gradient( to left, #632E0Aee 70%,transparent );
+}
+section h2::after{
+    background-image: linear-gradient( to right, #632E0Aee 70%,transparent );
+}
+
 section{
     width: 100%;
     max-width: 1200px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    
 }
 section>h2{
     width: 100%;
@@ -119,6 +145,7 @@ section>h2{
             animation: move 5s 1s infinite;
         }
         .smMenu{
+            
             display: none;
         }
         @keyframes move {
@@ -144,12 +171,13 @@ section>h2{
 @media screen and ( min-width:996px ) {
     .smMenu{
         box-sizing: border-box;
-        padding: 20px;
+        padding: 60px 20px 20px 20px;
         width: 20%;
-        /* height: 20px; */
-        /* background-color: #afa; */
         cursor: pointer;
         color:#632E0A;
+        position: sticky;
+        top: 3em;
+        margin: 0px auto auto auto;
     }
     .smMenu>div{
         margin: 5px 0px;
@@ -157,12 +185,33 @@ section>h2{
         padding: 10px 15px;
         border-radius: 10px;
     }
-    .smMenu>div:hover ,.smMenu>div:first-child{
+    .smMenu>div:hover , .active{
         background-color: #632E0A;
         color: #FBF2E1 ;
     }
     .news{
         width: 80%;
+    }
+    .news .newsCell{
+        padding: 10px;
+    }
+    .news .newsCell .txt{
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .news .newsCell:hover{
+        background-color: #A13B9188;
+        transition: all .5s;
+    }
+    .news .newsCell::before{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+        line-height: 2em;
+        content: attr(data-note);
+        color: #632E0Aaa;
     }
 }
 

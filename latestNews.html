@@ -11,8 +11,6 @@
     <!-- ---------------------共用--------------------- -->
     <link rel="stylesheet" href="css/globalCss.css">
     <script src="js/globalJs.js"></script>
-
-
     <link rel="stylesheet" href="css/latestNews.css"> 
 </head>
 <body>
@@ -45,12 +43,11 @@
     <section>
         <h2>最新消息</h2>
         <article class="smMenu">
-            <div>總覽</div>
+            <div class="active">總覽</div>
             <div>訊息公告</div>
             <div>住房優惠</div>
             <div>限期優惠</div>
             <div>付款相關優惠</div>
-            
         </article>
         <article class="news">
             <article class="newsCell hide" data-note="發布日期：2021-01-01">
@@ -97,9 +94,6 @@
             </article>
         </article>
     </section>
-   
-      
-    
     <footer>
         <div class="footerLogo">
             <a href="#"><img src="pic/instagram.svg" alt="InstagramLogo"></a>
@@ -109,22 +103,6 @@
         </div>
         <div class = "copyright">Copyright © 2022 CWjyun 僅供學習、展示用</div>
     </footer>
-    <script>
-        let newsCell;
-        window.addEventListener('load',()=>{
-            newsCell = document.querySelectorAll('.newsCell')
-            newsCell.forEach((e)=>{
-                e.addEventListener('click', ()=>{
-                    newsCell.forEach((e)=>{
-                        e.classList.add('hide')
-                    });
-                    e.classList.remove('hide')
-                });
-            });
-        });
-        // newsCell.forEach((e)=>{
-                    //     e.classList.add('hide')
-                    // });
-    </script>
+    <script src="js/latestNews.js"></script>
 </body>
 </html>

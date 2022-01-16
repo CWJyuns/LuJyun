@@ -425,3 +425,58 @@ h2{
         left: 0;
     }
 }
+
+
+
+ /* <!-- ---------------------OwlCarousel slider--------------------- --> */
+ .owl-carousel{
+    position: relative;
+    /* max-width: 1200px; */
+    margin: auto;
+}
+
+.owl-theme .owl-nav [class*=owl-]{
+    display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: 0px;
+    color:#FFFa;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    padding: 0px 10px !important ;
+}
+.owl-carousel .owl-nav button.owl-next{
+    border-radius: 100px 0px 0px 100px 
+}
+.owl-carousel .owl-nav button.owl-prev{
+    border-radius: 0px 100px 100px 0px ; 
+}
+.owl-next{
+    right: 0;
+}
+.owl-prev{
+    left: 0;
+}
+.owl-theme .owl-nav [class*=owl-]>span{
+    font-size: 80px;
+    color:#FFFa;
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+    /* background-color: #000; */
+    box-sizing: border-box;
+    background-color: #86979155;
+}
+.owl-dots{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+.myImgSlider > img{
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    max-height: 500px;
+    width: 100%;
+}
