@@ -11,11 +11,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-
-
-
-
-
 .selectDate {
     width: 30%;
     box-sizing: border-box; 
