@@ -16,7 +16,7 @@ window.addEventListener("load",function(){
     datestable = document.getElementById('datestable');
     rightBtn =  document.getElementsByClassName('rightBtn')
     leftBtn = document.getElementsByClassName('leftBtn')
-   
+  
     var nowdate = new Date();       //獲取當前的日期
     year = nowdate.getFullYear();
     month = nowdate.getMonth();
@@ -33,13 +33,13 @@ function selectBtnCreate(){
     selectday = document.querySelectorAll(".canAppointment")
     selectday.forEach( e => {
         e.addEventListener("click",()=>{
-            e.classList.add("selectday")
+            e.classList.toggle("selectday")
             if(selseDayArray[0] == ''){
                 selseDayArray[0] = `${year}`+`${(month + 1)}`.padStart(2, '0')+`${(e.innerHTML)}`.padStart(2, '0')
             }
-            if(/selectday/.text(e.classList)){
-                document.write('aaaaaa')
-            }
+            // if(/selectday/.text(e.classList)){
+            //     document.write('aaaaaa')
+            // }
         });
     });
 }
@@ -105,6 +105,8 @@ let selectRoomPage;
 let selectDatePage;
 let selectDatePageBtn;
 let selectRoomPageCell;
+let peopleNumber;
+
 window.addEventListener("load",()=>{
     selectRoomBtn = document.querySelector('.determineRoom .txt div:nth-child(1)')
     selectDateBtn = document.querySelector('.determineRoom .txt div:nth-child(2)')
@@ -114,6 +116,8 @@ window.addEventListener("load",()=>{
     selectDatePage = document.querySelector('.selectDate')
     selectRoomPageCell = document.querySelectorAll('.selectRoom>article')
     selectDatePageBtn = document.querySelector('.selectDate > .btn ')
+    peopleNumber = document.querySelector('.peopleNumber')
+    peopleNumberText = document.querySelector('.determineRoom .txt div:nth-child(3) span')
     selectRoomBtn.addEventListener('click',()=>{
         selectPage.classList.add('showSelectPage')
         selectRoomPage.classList.add('show')
@@ -123,7 +127,7 @@ window.addEventListener("load",()=>{
         selectDatePage.classList.add('show')
     });
     selectPeopleNumberBtn.addEventListener('click',()=>{
-
+        peopleNumber.focus();
     });
     
     // selectPage.addEventListener("click",(e)=>{
@@ -146,5 +150,9 @@ window.addEventListener("load",()=>{
 
         })
         
+    });
+    
+    peopleNumber.addEventListener('input',(e)=>{
+        peopleNumberText.innerHTML = peopleNumber.value;
     });
 });
