@@ -71,6 +71,19 @@ article h3{
     background-color: #632E0Aee ;
     color: #FBF2E1 ;           
 }
+.room a.btn{
+    background-color: #F9BC20;
+    box-sizing: border-box;
+    display: block;
+    color: #ffffff;
+    text-shadow: 0px 0.5px 2px  #000a;
+    padding:0.6rem 1.5rem;
+    border-radius: 10px;
+    line-height: 1rem;
+    box-shadow: 2px 2px 5px 1px #888;
+    margin: 10px 0px 20px 0px;
+    /* width: 100%; */
+}
 @media screen and (min-width:768px) {
     .room .txt{
         justify-content: flex-end;
@@ -153,17 +166,8 @@ article h3{
         width: 1rem;
         transition: width 0.5s 1s ;
     }
-}
-.room a.btn{
-    background-color: #F9BC20;
-    box-sizing: border-box;
-    display: block;
-    color: #ffffff;
-    text-shadow: 0px 0.5px 2px  #000a;
-    padding:0.6rem 1.5rem;
-    border-radius: 10px;
-    line-height: 1rem;
-    box-shadow: 2px 2px 5px 1px #888;
-    margin: 10px 0px 20px 0px;
-    /* width: 100%; */
+    section{
+        box-sizing: border-box;
+        padding: 0px 100px;
+    }
 }

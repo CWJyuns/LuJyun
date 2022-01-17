@@ -106,9 +106,17 @@ header nav a.btn {
     padding: 20px;
     box-sizing: border-box;
 }
+.money{
+    /* padding: 40px; */
+    line-height: 4em;
+    padding: 0px;
+    width: 80%;
+    align-items: center; 
+}
 .determineRoom{
     width: 100%;
     /* width: 70%; */
+    justify-content: center;
 }
 .determineRoom .pic{
     width: 100%;
@@ -117,8 +125,7 @@ header nav a.btn {
 .determineRoom .txt{
     box-sizing: border-box;
     /* padding: 0px 30px; */
-    width: 100%;
-    
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -130,15 +137,7 @@ header nav a.btn {
     line-height: 4em;
     
 }
-.money{
-    /* padding: 40px; */
-    line-height: 4em;
-    padding: 0px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; 
-}
+
 .money div{
     width: 100%;
     
@@ -322,37 +321,7 @@ caption{
     z-index: -1;
    
 } */
-@media screen and (min-width:768px) {
-    .determineRoom .pic img{
-        max-height: 500px;
-    }
-    .selectDate,.selectRoom{
-        width: 60%; 
-    }
-    .selectRoom>article .txt{
-        padding: 20px 30px;
-    }
-    .determineRoom{
-        width: 100%;
-        align-items: center;
-    }
-    .determineRoom .pic{
-        box-sizing: border-box;
-        padding: 10px;
-        width: 30%;
-    }
-    .determineRoom .txt{
-        width: 40%;
-    }
-    .money{
-        width: 30%;
-    }
-}
-@media screen and (min-width:996px) {
-    .selectDate,.selectRoom{
-        width: 40%;  
-    }
-}
+
 
 
 .selectRoom>article .pic img{
@@ -426,5 +395,36 @@ caption{
     }
     100%{
         opacity: 1;
+    }
+}
+@media screen and (min-width:768px) {
+    .determineRoom .pic img{
+        max-height: 500px;
+    }
+    .selectDate,.selectRoom{
+        width: 60%; 
+    }
+    .selectRoom>article .txt{
+        padding: 20px 30px;
+    }
+    .determineRoom{
+        width: 100%;
+        align-items: center;
+    }
+    .determineRoom .pic{
+        box-sizing: border-box;
+        padding: 10px;
+        width: 30%;
+    }
+    .determineRoom .txt{
+        width: 40%;
+    }
+    .money{
+        width: 30%;
+    }
+}
+@media screen and (min-width:996px) {
+    .selectDate,.selectRoom{
+        width: 40%;  
     }
 }

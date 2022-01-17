@@ -203,3 +203,9 @@ caption{
         margin: 0px auto;
     }
 }
+@media screen and (min-width:996px) {
+    section{
+        padding: 0px 100px;
+        box-sizing: border-box;
+    }
+}
