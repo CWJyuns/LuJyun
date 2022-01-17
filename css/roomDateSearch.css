@@ -47,52 +47,8 @@ section h2::after{
     margin-top: -2em;
 }
 
-@media screen and (max-width:767px) {
-    
-    .selectRoom .pic img{
-        max-height: 200px;
-        object-fit: cover;
-        /* width: 100%; */
-    }
-    .selectRoom .pic{
-        width: 100%;
-    }
-   
-    .selectRoom .selectDate{
-        width: 100%;
-        padding: 10px 10%;
-        margin: auto;
-    }
-   
-    .selectRoom + .selectRoom{
-        margin-top: 30px;
-    }
-}
-@media screen and (min-width:768px) {
-    article.selectRoom:hover{
-        border: 10px solid #A13B9188;
-        transform: scale(1.05);
-        /* background-color: ; */
-        transition: all .5s;
-        border-radius: 10px;
-    }
-    .selectRoom .pic {
-        width:40%;
-        border-radius: 10px;
-        overflow: hidden;
-        align-self:center ;
-    }
-    article.selectRoom{
-        /* align-items: center; */
-        margin: 10px;
-        padding: 50px 30px ;
-        box-sizing:border-box;
-    }
-    .selectRoom a.btn{
-        align-self:flex-end;
-        margin: 0px auto;
-    }
-}
+
+
 
 .selectRoom{
     display: flex;
@@ -199,4 +155,51 @@ caption{
 }
 .canNotAppointment{
     color: #ddd;
+}
+
+@media screen and (max-width:767px) {
+    
+    .selectRoom .pic img{
+        max-height: 200px;
+        object-fit: cover;
+        /* width: 100%; */
+    }
+    .selectRoom .pic{
+        width: 100%;
+    }
+   
+    .selectRoom .selectDate{
+        width: 100%;
+        padding: 10px 10%;
+        margin: auto;
+    }
+   
+    .selectRoom + .selectRoom{
+        margin-top: 30px;
+    }
+}
+@media screen and (min-width:768px) {
+    article.selectRoom:hover{
+        border: 5px solid #A13B9188;
+        /* transform: scale(1.05); */
+        /* background-color: ; */
+        transition: all .5s;
+        border-radius: 10px;
+    }
+    .selectRoom .pic {
+        width:40%;
+        border-radius: 10px;
+        overflow: hidden;
+        align-self:center ;
+    }
+    article.selectRoom{
+        /* align-items: center; */
+        margin: 10px;
+        padding: 50px 30px ;
+        box-sizing:border-box;
+    }
+    .selectRoom a.btn{
+        align-self:flex-end;
+        margin: 0px auto;
+    }
 }
