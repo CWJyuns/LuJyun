@@ -205,7 +205,7 @@ section>h2{
     }
     
     .news .newsCell:hover{
-        background-color: #A13B9188;
+        background-color: #A13B9122;
         transition: all .5s;
     }
     .news .newsCell::before{
