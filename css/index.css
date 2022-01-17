@@ -506,6 +506,12 @@ h2{
     
 }
 @media screen and (min-width:996px) {
+    section{
+        padding: 0px 60px;
+    }
+    .selectNews,.roomRefer{
+        padding: 0px 120px;
+    }
     /* ------------------------ 聯絡我們 ------------------------ */
     .contactUs .txt,.contactUs .contactBlock{
         padding: 0px 60px;
@@ -519,7 +525,7 @@ h2{
         width: 50%;
     }
     .map{
-        padding: 0px 60px;
+        padding: 0px 100px;
     }
     
 }

@@ -427,4 +427,7 @@ caption{
     .selectDate,.selectRoom{
         width: 40%;  
     }
+    section{
+        padding: 0px 100px;
+    }
 }
