@@ -104,6 +104,10 @@ footer>.copyright {
     font-size: 12px;
     box-sizing: border-box;
     padding: 1em 0;
+    display: block;
+}
+footer>.copyright div{
+    display: block;
 }
 
 /* -------------漢堡堡------------- */
