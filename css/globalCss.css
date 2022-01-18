@@ -97,13 +97,15 @@ footer{
     color: #E5EEc1f0;
 
 }
-footer>div:last-child{
+footer>.copyright {
     text-align: center;
     /* padding: 10px; */
-    line-height: 2.5rem;
+    line-height: 1.5rem;
     font-size: 12px;
     box-sizing: border-box;
+    padding: 1em 0;
 }
+
 /* -------------漢堡堡------------- */
 .hamburger{
     padding: 26px 20px;

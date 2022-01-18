@@ -7,6 +7,23 @@
     padding: 10px 0px;
     display: flex;
     overflow:hidden ;
+    position: relative;
+}
+
+.room .pic div img::after{
+    content: '';
+    position: absolute;
+    height: 80%;
+    margin: auto;
+    top: 0;
+    background-color: #222a;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.room .pic div:hover img::after{
+    background-color: transparent;
+   
 }
 .txt p span{
     display: inline-block;
